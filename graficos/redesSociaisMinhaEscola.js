@@ -13,7 +13,7 @@ async function redesFavoritasMinhaEscola() {
             labels: redes,
             type: 'pie',
             textinfo: 'label+percent',
-            textfont: { color: '#FFFFFF' }  // Garantindo que o texto dentro do gráfico seja branco
+            textfont: { color: '#FFFFFF' },  // Garantindo que o texto dentro do gráfico seja branco
         }
     ]
 
@@ -34,7 +34,12 @@ async function redesFavoritasMinhaEscola() {
             font: {
                 color: getCSS('--primary-color'), // Cor da legenda em branco
                 size: 16
-            }
+            },
+            orientation: 'v', // Define a orientação da legenda como vertical
+            x: 1.05,  // Posiciona a legenda à direita do gráfico
+            y: 0.5,   // Centraliza verticalmente a legenda
+            traceorder: 'normal',
+            bgcolor: 'transparent'
         }
     }
 
@@ -44,3 +49,4 @@ async function redesFavoritasMinhaEscola() {
 }
 
 redesFavoritasMinhaEscola()
+
